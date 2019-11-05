@@ -1,8 +1,11 @@
-const formatName = (date) => {
-  var cleanName = date;
-  cleanName = cleanName.replace(/#/g, " ");
+const formatName = (name) => {
+  var cleanName = name;
+  const firstLetter = cleanName.charAt(1).toUpperCase();
+  cleanName = cleanName.replace(/--/g, " "); // we want to format the double -- first
+  cleanName = cleanName.replace(/#/g, "");
   cleanName = cleanName.replace(/-/g, " ");
-  cleanName = cleanName.toUpperCase();
+  cleanName = firstLetter + cleanName.slice(1);
+
   return cleanName;
 }
 

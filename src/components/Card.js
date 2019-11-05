@@ -14,14 +14,20 @@ const styles = StyleSheet.create({
     textAlign:'center',
     fontSize: 20,
   },
+  name: {
+    fontSize: 15,
+  },
+  content: {
+    fontSize: 15,
+  },
 });
 
 const Card = (props) => {
   return(
-    <View>
-      <Text style={styles.day}> {formatDay(props.day)}</Text>
-      <Text style={styles.day}> {formatName(props.name)}</Text>
-      <Text style={styles.day}> {formatContent(props.content)}</Text>
+    <View styles={styles.sectionContainer}>
+      <Text style={styles.day}>{formatDay(props.day)}</Text>
+      <Text style={styles.name}> {formatName(props.name)}</Text>
+      <Text style={styles.content}>{formatContent(props.content)}</Text>
     </View>
   );
 }
