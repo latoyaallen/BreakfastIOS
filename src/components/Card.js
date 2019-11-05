@@ -4,6 +4,7 @@ import {
   View,
   Text,
 } from 'react-native';
+import formatDay from '../lib/formatDay';
 
 const styles = StyleSheet.create({
   day: {
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
 const Card = (props) => {
   return(
     <View>
-      <Text style={styles.day}> {props.day}</Text>
+      <Text style={styles.day}> {formatDay(props.day)}</Text>
       <Text style={styles.day}> {props.name}</Text>
       <Text style={styles.day}> {props.content}</Text>
     </View>
