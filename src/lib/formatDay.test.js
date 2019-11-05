@@ -1,6 +1,5 @@
 import formatDay from './formatDay'
 
-
 it('replaces # with an empty string', () => {
   const content = "#SHOWTIME" ;
   expect(formatDay(content)).toEqual(" SHOWTIME");
